@@ -47,7 +47,7 @@ export default ({ posts = [] }) => {
     <>
       <Header titlePre="Blog" />
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
-        <h1>글 목록</h1>
+        <h1>감자의 블로그</h1>
         {posts.length === 0 && (
           <p className={blogStyles.noPosts}>작성한 글이 없습니다.</p>
         )}
