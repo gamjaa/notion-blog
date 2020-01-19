@@ -47,9 +47,9 @@ export default ({ posts = [] }) => {
     <>
       <Header titlePre="Blog" />
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
-        <h1>My Notion Blog</h1>
+        <h1>글 목록</h1>
         {posts.length === 0 && (
-          <p className={blogStyles.noPosts}>There are no posts yet</p>
+          <p className={blogStyles.noPosts}>작성한 글이 없습니다.</p>
         )}
         {posts.map(post => {
           return (
@@ -60,10 +60,10 @@ export default ({ posts = [] }) => {
                 </Link>
               </h3>
               {post.Authors.length > 0 && (
-                <div className="authors">By: {post.Authors.join(' ')}</div>
+                <div className="authors">글쓴이: {post.Authors.join(' ')}</div>
               )}
               {post.Date && (
-                <div className="posted">Posted: {getDateStr(post.Date)}</div>
+                <div className="posted">날짜: {getDateStr(post.Date)}</div>
               )}
               <p>
                 {(!post.preview || post.preview.length === 0) &&
